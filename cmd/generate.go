@@ -29,7 +29,7 @@ var generateCmd = &cobra.Command{
 			return
 		}
 
-		fmt.Printf("chose %s.", answers.LicenseType)
-		generateFile()
+		generateFile(answers.LicenseType)
+
 	},
 }
