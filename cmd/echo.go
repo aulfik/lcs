@@ -53,6 +53,15 @@ func generateFile(licenseType string) {
 	if licenseType == "Apache License 2.0" {
 		lictext = data.GetApacheText("2021", "Aulia Fikri")
 	}
+
+	if licenseType == "Boost Software License 1.0" {
+		lictext = data.GetBoostText()
+	}
+
+	if licenseType == "The Unlicense" {
+		lictext = data.GetUnlicenceText()
+	}
+
 	_, err2 := f.WriteString(lictext)
 
 	if err2 != nil {
