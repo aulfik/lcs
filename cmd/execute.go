@@ -8,14 +8,10 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "lcs",
-	Short: "Lcs is a very fast licence generator",
-	Long: `A Fast and Flexible Licence Generator built with
-				  love in Go.
-				  Complete documentation is available at http://auliafikri.engineer/lcs`,
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Hello World!")
-	},
+    Use:   "lcs",
+	Short: "LCS is a very fast license generator",
+	Long: `A fast and flexible license generator built with love in Go.
+The complete documentation is available at http://auliafikri.engineer/lcs`,
 }
 
 func Execute() {
