@@ -1,6 +1,6 @@
 package data
 
-func GetUnlicenceText() string {
+func GetUnlicenseText() string {
 	text := `
 	This is free and unencumbered software released into the public domain.
 
