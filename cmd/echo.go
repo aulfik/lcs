@@ -15,15 +15,15 @@ var qs = []*survey.Question{
 		Prompt: &survey.Select{
 			Message: "Choose a license:",
 			Options: []string{
-                "MIT License", 
-                "GNU AGPLv3", 
-                "GNU GPLv3", 
-                "GNU LGPLv3", 
-                "Mozilla Public License 2.0", 
-                "Apache License 2.0", 
-                "Boost Software License 1.0", 
-                "The Unlicense",
-            },
+				"MIT License",
+				"GNU AGPLv3",
+				"GNU GPLv3",
+				"GNU LGPLv3",
+				"Mozilla Public License 2.0",
+				"Apache License 2.0",
+				"Boost Software License 1.0",
+				"The Unlicense",
+			},
 			Default: "MIT License",
 		},
 	},
@@ -33,7 +33,7 @@ func generateFile(licenseType string) {
 	f, err := os.Create("LICENSE")
 	if err != nil {
 		fmt.Printf("%v", err)
-        return // It will terminate the process and not execute the rest of the codes
+		return // It will terminate the process and not execute the rest of the codes
 	}
 
 	defer f.Close()
@@ -41,15 +41,15 @@ func generateFile(licenseType string) {
 	var licText string
 
 	if licenseType == "MIT License" {
-		licText = data.GetMitText("2021", "Aulia")
+		licText = data.GetMitText("2022", "Aulia")
 	}
 
 	if licenseType == "GNU AGPLv3" {
-		licText = data.GetGnuAgplv3Text("Program", "2021", "Aulia Fikri")
+		licText = data.GetGnuAgplv3Text("Program", "2022", "Aulia Fikri")
 	}
 
 	if licenseType == "GNU GPLv3" {
-		licText = data.GetGnuGplv3Text("Program Well", "2021", "Aulia Fikri", "My Program")
+		licText = data.GetGnuGplv3Text("Program Well", "2022", "Aulia Fikri", "My Program")
 	}
 
 	if licenseType == "GNU LGPLv3" {
@@ -61,7 +61,7 @@ func generateFile(licenseType string) {
 	}
 
 	if licenseType == "Apache License 2.0" {
-		licText = data.GetApacheText("2021", "Aulia Fikri")
+		licText = data.GetApacheText("2022", "Aulia Fikri")
 	}
 
 	if licenseType == "Boost Software License 1.0" {
@@ -75,6 +75,6 @@ func generateFile(licenseType string) {
 	_, err2 := f.WriteString(licText)
 	if err2 != nil {
 		fmt.Printf("%v", err)
-        return
+		return
 	}
 }
