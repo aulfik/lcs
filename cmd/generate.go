@@ -14,8 +14,8 @@ func init() {
 var generateCmd = &cobra.Command{
 	Use:     "generate",
 	Aliases: []string{"g"},
-	Short:   "Print pass og generating file",
-	Long:    `All software has versions. This is lcs`,
+	Short:   "Generate a license file",
+	Long:    `Generate a licence file based on your input choices`,
 	Run: func(cmd *cobra.Command, args []string) {
 		// the answers will be written to this struct
 		answers := struct {
@@ -30,6 +30,5 @@ var generateCmd = &cobra.Command{
 		}
 
 		generateFile(answers.LicenseType)
-
 	},
 }
